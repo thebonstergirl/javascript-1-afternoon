@@ -7,13 +7,19 @@
 
 //Code here
 
+function greeting (name){
+return "Hello, " + name
+};
+
 //////////////////PROBLEM 2////////////////////
 
 //Rewrite the function greeting as a function expression.
 //Name it newGreeting.
 
 //Code Here
-
+var a = function newGreeting(name){
+  return "Hello, " + name
+};
 //////////////////PROBLEM 3////////////////////
 
 //Rewrite the function greeting as an arrow function.
