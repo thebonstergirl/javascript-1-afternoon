@@ -79,14 +79,12 @@ var devMountainClassPet = dog.name;
 //The value of bark should be a function that returns the string "Woof woof".
 
 //Code Here
-var bark = {bark: function(){return "Woof woof"}};
-
-dog.push(bark);
+dog.bark = () => {return "Woof woof"};
 
 //Store the result of invoking the bark method in a variable called ruff.
 
 //Code Here
-var ruff = bark;
+var ruff = dog.bark();
 
 //////////////////PROBLEM 6////////////////////
 
@@ -180,10 +178,10 @@ function pond() {
 let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathroomScope = ["duck", "rubberDuck",];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "rubberDuck"];
+let bathtubScope = ["duck", "rubberDuck", "sailorDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
 var pondScope = ["duck", "realDuck"];
@@ -195,10 +193,9 @@ var pondScope = ["duck", "realDuck"];
 
 //code here
 function outerFn(){
-  var a = function (){
+  return function (){
   return "Jordan"};
-  return a;
-}
+};
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
