@@ -200,10 +200,9 @@ function outerFn(){
 //Now save the result of invoking outerFn into a variable called innerFn.
 
 //Code Here
-function innerFn () {
-  return outerFn();
-}
+var innerFn = outerFn()
+
 //Now invoke innerFn and save the result to a variable called finalResult.
 
 //Code Here
-var finalResult = innerFn();
+var finalResult = innerFn;
